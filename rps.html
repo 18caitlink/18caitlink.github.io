@@ -35,18 +35,21 @@
                 if (yourChoice===computerChoice){
                     console.log("Draw. Try again.");
                     output = "Draw. Try again."
+                    document.getElementById("emptyParagraph").innerHTML = output
                 }
                 
                 else if (yourChoice === "rock" && computerChoice === "scissors" || yourChoice === "scissors" && computerChoice === "paper" || yourChoice === "paper" && computerChoice === "rock"){
                     yourScore += 1;
                     console.log("You Win :D Your Score "+ yourScore);
                     output = "You Win :D"
+                    document.getElementById("emptyParagraph").innerHTML = output
                 }
                 
                 else {
                     computerScore += 1;
                     console.log("You Loose :( Computer Score "+ computerScore);
                     output = "You Lose :("
+                    document.getElementById("emptyParagraph").innerHTML = output
                 }
                 
                 document.getElementById("output").innerHTML; 
@@ -56,11 +59,11 @@
             
             function winner(theComputersScore, yourScore){
                 if (theComputersScore > 9){
-                    console.log("You lose the game")
+                document.getElementById("gameCheck").innerHTML = "You lose the game"
                 }
                 
                 if (yourScore > 9){
-                    console.log("You win the game")
+                   document.getElementById("gameCheck").innerHTML = "You win the game"
                 }
             }
             
@@ -69,18 +72,18 @@
         
         </script>
         
-        
-        
-        <a href=#><img id="rock" src="http://3.bp.blogspot.com/-KHc70esXncY/T76RN0I7mKI/AAAAAAAAOwg/8xUnLhIcHGU/s1600/key%2Bholder.jpg" onclick="selectingChoice('rock');"></img></a>
-             
-        <img id="paper" src="http://www.sketchuptextureclub.com/public/texture_d/0005-white-crumpled-paper-texture-seamless-hr.jpg" onclick="selectingChoice('paper');" style="width: 400px; length: 600px"></img>
 
-        <br>
-        <br>    
-        <br>
-        <br>
-        <img id="scissors" src="http://dfwretail.com/wp-content/uploads/2016/06/scissors_PNG25.png" onclick="selectingChoice('scissors');" style="width: 400px; length: 600px"></img>
-             
+            <div style="text-align: center;">
+                <img id="rock" src="http://3.bp.blogspot.com/-KHc70esXncY/T76RN0I7mKI/AAAAAAAAOwg/8xUnLhIcHGU/s1600/key%2Bholder.jpg" onclick="selectingChoice('rock');" style="width: 400px; height: auto"></img>
+
+                <img id="paper" src="http://www.sketchuptextureclub.com/public/texture_d/0005-white-crumpled-paper-texture-seamless-hr.jpg" onclick="selectingChoice('paper');" style="width: 300px; height: auto "></img>
+
+
+                <img id="scissors" src="http://dfwretail.com/wp-content/uploads/2016/06/scissors_PNG25.png" onclick="selectingChoice('scissors');" style="width: 400px; height: auto"></img>
+
+                <p id="emptyParagraph" style="font-family: Courier New" ></p>
+                <p id="gameCheck" style="font-family: Courier New"></p>
+            </div>
 
             
     
