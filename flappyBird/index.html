@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            canvas {
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <canvas id="myCanvas" height="500" width="500"></canvas>
+        
+        
+        <script>
+            
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            
+            var bImg = new Image();
+            bImg.src = "bird.gif";
+            
+            ctx.drawImage(bImg,100,100);
+            
+        </script>
+        
+    </body>
+    
+    
